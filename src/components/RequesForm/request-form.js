@@ -89,7 +89,6 @@ export function createRequestForm() {
     form.addEventListener('submit', e => {
       e.preventDefault();
       if (validateName() && validatePhone() && checkbox.checked) {
-        alert('Форма успешно отправлена!');
         close();
       }
     });
