@@ -1,5 +1,7 @@
 import './styles/main.scss';
-import { createVideoPlayer } from './components/video-player/video-player';
+import data from './assets/data/cards.json'
+import { createVideoPlayer } from './components/VideoPlayer/video-player';
+import { createPtoductCards } from './components/ProductCards/product-cards'
 
 export function renderMainPage() {
   const app = document.querySelector('#app');
@@ -7,6 +9,10 @@ export function renderMainPage() {
 
   const videoElement = createVideoPlayer(urlVideo);
   app.appendChild(videoElement);
+  
+  const productCards = createPtoductCards(data);
+  app.appendChild(productCards);
+
 }
 
 
