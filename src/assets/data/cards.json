@@ -3,7 +3,7 @@
     "type": "large",
     "smallHeight": false,
     "title": "Горох в стручках, 1 кг",
-    "image": "./assets/peas.jpg",
+    "image": "assets/peas.jpg",
     "section": "1",
     "price": "570 ₽",
     "badges": [
@@ -15,7 +15,7 @@
     "type": "large",
     "smallHeight": true,
     "title": "Голубика лесная, 200 г",
-    "image": "./assets/blueberry.jpg",
+    "image": "assets/blueberry.jpg",
     "section": "2",
     "price": "140 ₽",
     "badges": [
