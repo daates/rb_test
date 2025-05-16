@@ -19,7 +19,7 @@
 
 
   &__header{
-    width: 159px;
+    width: 100%;
     height: 159px;
     display: flex;
     justify-content: space-between;
@@ -30,6 +30,10 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
+
+    @media (max-width: 360px) {
+      height: 170px;
+    }
   }
 
   &__title {
@@ -37,6 +41,12 @@
     font-weight: 600;
     width: 150px;
     margin-bottom: 0;
+
+    @media (max-width: 360px) {
+      font-size: 17.5px;
+      width: 200px;
+      margin-bottom: auto;
+    }
   }
 
   &__icon{
@@ -61,16 +71,15 @@
     height: auto;
   }
 
-  &__footer-right{
-    display: flex;
-    gap: 10px;
-    align-items: flex-end; 
-  }
   
   &__price{
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 8px;
+
+    @media (max-width: 360px) {
+      font-size: 25px;
+    }
   }
 
   &__stocks{
@@ -107,4 +116,8 @@
   background-position: center top;
   z-index: -1;
   border-radius: 5px  5px 0px 0px;
+
+  @media (max-width: 360px) {
+    height: 230px;
+  }
 }
