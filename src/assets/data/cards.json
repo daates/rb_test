@@ -3,7 +3,7 @@
     "type": "large",
     "smallHeight": false,
     "title": "Горох в стручках, 1 кг",
-    "image": "/assets/peas.jpg",
+    "image": "./assets/peas.jpg",
     "section": "1",
     "price": "570 ₽",
     "badges": [
@@ -15,7 +15,7 @@
     "type": "large",
     "smallHeight": true,
     "title": "Голубика лесная, 200 г",
-    "image": "/assets/blueberry.jpg",
+    "image": "./assets/blueberry.jpg",
     "section": "2",
     "price": "140 ₽",
     "badges": [
@@ -27,7 +27,7 @@
     "type": "large",
     "smallHeight": true,
     "title": "Морковь мытая, 1 кг",
-    "image": "/assets/carrot.jpg",
+    "image": "./assets/carrot.jpg",
     "section": "2",
     "price": "140 ₽",
     "badges": [
@@ -38,7 +38,7 @@
    {
     "type": "vertical",
     "title": "Попкорн солёный, для СВЧ-печи, 120 г",
-    "image": "/assets/popcorn.jpg",
+    "image": "./assets/popcorn.jpg",
     "section": "3",
     "price": "160 ₽",
     "badges": [
@@ -49,7 +49,7 @@
   {
     "type": "vertical",
     "title": "Эскимо с малиной, 150 г",
-    "image": "/assets/icecream.jpg",
+    "image": "./assets/icecream.jpg",
     "section": "3",
     "price": "190 ₽",
     "badges": [
