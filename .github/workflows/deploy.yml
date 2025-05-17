@@ -31,5 +31,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}  
           source: "dist/*"
-          target: "daates.beget.tech/public_html"
+          target: "./daates.beget.tech/public_html"
 
