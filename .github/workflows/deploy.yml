@@ -30,7 +30,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}  
-          script: |
-            cd daates.beget.tech/public_html
-            rm -rf *                        
-            cp -r $GITHUB_WORKSPACE/dist .            
+          source: "dist/*"
+          target: "daates.beget.tech/public_html"
+
