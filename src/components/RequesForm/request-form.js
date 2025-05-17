@@ -33,6 +33,7 @@ export function createRequestForm() {
     popupOverlay.addEventListener('click', e => {
       if (e.target === popupOverlay) close();
     });
+    
 
     function validateName() {
       const value = nameInput.value.trim();
@@ -41,6 +42,7 @@ export function createRequestForm() {
       nameError.style.display = isValid ? 'none' : 'block';
       return isValid;
     }
+
 
     function validatePhone() {
       let val = phoneInput.value.replace(/[^\d+]/g, '');
@@ -54,6 +56,7 @@ export function createRequestForm() {
       return isValid;
     }
 
+
     phoneInput.addEventListener('focus', () => {
       if (!phoneInput.value.startsWith('+7')) {
         phoneInput.value = '+7';
@@ -63,16 +66,19 @@ export function createRequestForm() {
       }
     });
 
+
     phoneInput.addEventListener('keydown', e => {
       if (phoneInput.selectionStart <= 2 && (e.key === 'Backspace' || e.key === 'Delete')) {
         e.preventDefault();
       }
     });
 
+
     function updateSubmitState() {
       const isValid = validateName() && validatePhone() && checkbox.checked;
       submitBtn.disabled = !isValid;
     }
+
 
     nameInput.addEventListener('input', () => {
       validateName();
@@ -84,15 +90,47 @@ export function createRequestForm() {
       updateSubmitState();
     });
 
+
+
     checkbox.addEventListener('change', updateSubmitState);
 
-    form.addEventListener('submit', e => {
+
+
+    form.addEventListener('submit', async e => {
       e.preventDefault();
+
       if (validateName() && validatePhone() && checkbox.checked) {
-        close();
+        
+        const formData = {
+          name: form.querySelector('input[name="name"]').value,
+          phone: form.querySelector('input[name="phone"]').value
+        };
+
+        try {
+          const response = await fetch('./api/send-mail.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
+
+          const result = await response.json();
+
+          if (result.success) {
+            console.log('Сообщение успешно отправлено');
+            close();
+          } else {
+            console.error('Ошибка сервера:', result.message);
+          }
+        } catch (error) {
+          console.error('Ошибка отправки:', error);
+        }
       }
     });
   }
+
+
 
   function close() {
     if (!popupOverlay) return;
