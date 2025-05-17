@@ -17,7 +17,7 @@ if (!$data || !isset($data['name']) || !isset($data['phone'])) {
 $name = htmlspecialchars($data['name']);
 $phone = htmlspecialchars($data['phone']);
 
-$to = "sa0529083@gmail.com";
+$to = "rbru-metrika@yandex.ru";
 $subject = "Отправка заявки на почту";
 $message = "Имя: $name\nТелефон: $phone";
 
