@@ -21,7 +21,7 @@ $to = "sa0529083@gmail.com";
 $subject = "Отправка заявки на почту";
 $message = "Имя: $name\nТелефон: $phone";
 
-$headers = "From: rb_test\r\n";
+$headers = "From: daates.beget.tech\r\n";
 $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
 $success = mail($to, $subject, $message, $headers);
