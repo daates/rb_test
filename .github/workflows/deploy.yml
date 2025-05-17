@@ -41,5 +41,5 @@ jobs:
           password: ${{ secrets.SSH_PASS }}  
           script: |
             cd daates.beget.tech/public_html
-            cp -rf ./temp/dist/* .
+            cp -rf ./temp/dist .
 
