@@ -12,6 +12,10 @@ export function createPtoductCards(data) {
   const section2 = container.querySelector('.product-cards__section-2');
   const section3 = container.querySelector('.product-cards__section-3');
 
+  const itemTrack =document.createElement('div');
+  itemTrack.classList.add('section-3-tracker');  
+  section3.appendChild(itemTrack);
+
   data.forEach(card => {
     let cardElement;
 
@@ -28,8 +32,9 @@ export function createPtoductCards(data) {
 
     if (card.section === "1") section1.appendChild(cardElement);
     else if (card.section === "2") section2.appendChild(cardElement);
-    else if (card.section === "3") section3.appendChild(cardElement);
+    else if (card.section === "3") itemTrack.appendChild(cardElement);
   });
+
 
   return container;
 }

@@ -2,6 +2,7 @@ import './styles/main.scss';
 import data from './assets/data/cards.json'
 import { createVideoPlayer } from './components/VideoPlayer/video-player';
 import { createPtoductCards } from './components/ProductCards/product-cards'
+import { initSliderForSection3 } from './components/ProductCards/slider/init-slider'
 
 export function renderMainPage() {
   const app = document.querySelector('#app');
@@ -13,6 +14,7 @@ export function renderMainPage() {
   const productCards = createPtoductCards(data);
   app.appendChild(productCards);
 
+  initSliderForSection3();
 }
 
 
