@@ -30,6 +30,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASS }}  
-          source: "dist/*"
+          source: "./dist"
           target: "./daates.beget.tech/public_html"
 
