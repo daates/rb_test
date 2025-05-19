@@ -44,7 +44,7 @@
     }
   }
 
-  @media (max-width: 1207px) {
+  @media (max-width: 1210px) {
 
 
     &__section-1 {
@@ -66,7 +66,7 @@
     }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
 
     &__section-1 {
@@ -83,7 +83,7 @@
     }
     &__section-3 {
       order: 3;
-      width: 350px;
+      width: 330px;
       height: 420px;
       overflow: hidden;
 
@@ -113,7 +113,7 @@
   margin-top: 10px;
   gap: 8px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     display: flex; 
   }
 

@@ -6,11 +6,11 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1207px) {
+  @media (max-width: 1210px) {
     height: 465px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     height: 300px;
   }
 }
@@ -21,12 +21,12 @@
   height: 517px;
   overflow: hidden;
   
-  @media (max-width: 1207px) {
+  @media (max-width: 1210px) {
     width: 784px;
     height: 337px;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 328px;
     height: 204px;
   }

@@ -145,7 +145,7 @@ export function initSliderForSection3() {
     sliderInitialized = true;
 
     slideIndex = 0;
-    slideWidth = slides[0].offsetWidth;
+    slideWidth = slides[0].offsetWidth+20;
     lastTrf = (slides.length - 1) * slideWidth;
     posThreshold = slideWidth * 0.35;
 
@@ -163,6 +163,15 @@ export function initSliderForSection3() {
     dot.classList.add('dot');
     if (i === 0) dot.classList.add('active');
     dotsContainer.appendChild(dot);
+
+    slides.forEach((slide, index) => {
+        slide.classList.add('fade-slide');
+        if (index === slideIndex) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
 
     dot.addEventListener('click', () => {
         slideIndex = i;
